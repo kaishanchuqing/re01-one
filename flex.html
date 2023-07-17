@@ -13,11 +13,20 @@
       .yinYing {
         box-shadow: 2px 2px 4px #4640406d;
       }
+      .pinkwenZi {
+        text-shadow: 2px 2px 4px pink;
+      }
+      .redwenZi {
+        text-shadow: 1px 1px 1px red;
+      }
       .flex {
         display: flex;
       }
       .baiSe {
         background-color: white;
+      }
+      .fenSe {
+        background-color: pink;
       }
       .flex1 {
         flex: 1;
@@ -42,6 +51,9 @@
         border-bottom: 1px solid rgb(190, 188, 188);
         font-size: 20px;
         color: rgb(255, 172, 186);
+      }
+      .mgl15 {
+        margin-left: 15px;
       }
       @media (max-width: 600px) {
         .ceBian {
@@ -90,17 +102,21 @@
       </div>
       <!--导航栏-->
       <div class="flex1">
-        <div class="daoHang">导航</div>
-        <div class="daoHang">导航</div>
-        <div class="daoHang">导航</div>
-        <div class="daoHang">导航</div>
-        <div class="daoHang">导航</div>
+        <div style="font-size: 25px" class="daoHang pinkwenZi">导航</div>
+        <div style="font-size: 25px" class="daoHang pinkwenZi">导航</div>
+        <div style="font-size: 25px" class="daoHang pinkwenZi">导航</div>
+        <div style="font-size: 25px" class="daoHang pinkwenZi">导航</div>
+        <div style="font-size: 25px" class="daoHang pinkwenZi">导航</div>
       </div>
     </div>
     <!--主区域-->
     <div class="flex1 flex colum yinYing">
       <!--头部栏-->
-      <div style="height: 120px; z-index: 1" class="baiSe mgl8 yinYing"></div>
+      <div style="height: 120px; z-index: 1" class="fenSe mgl8 yinYing flex">
+        <p style="color: red; font-size: 30px" class="mgl15 redwenZi">
+          想必来到这里的都是些无所事事的人吧
+        </p>
+      </div>
       <!--内容区-->
       <div style="overflow: auto" class="neiRong flex1 flex yinYing">
         <!--左区-->
