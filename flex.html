@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex 布局</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      .yinYing {
+        box-shadow: 2px 2px 4px #4640406d;
+      }
+      .flex {
+        display: flex;
+      }
+      .baiSe {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .colum {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .mgl8 {
+        margin-left: 8px;
+      }
+      .daoHang {
+        padding: 10px 20px;
+        border-bottom: 1px solid rgb(190, 188, 188);
+        font-size: 20px;
+        color: rgb(255, 172, 186);
+      }
+      @media (max-width: 600px) {
+        .ceBian {
+          display: none;
+        }
+        .neiRong {
+          flex-direction: column;
+        }
+        .shuJuQu {
+          flex-direction: column;
+        }
+        .youQu {
+          margin-left: 8px;
+        }
+        .shuJU {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+      }
+      .neiRong::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!--侧边栏-->
+    <div style="width: 250px; z-index: 2" class="baiSe yinYing ceBian">
+      <!--头像栏-->
+      <div class="flex">
+        <img
+          src="https://i.postimg.cc/VvmDwJ0Y/image.jpg"
+          width="80px"
+          height="80px"
+          alt=""
+        />
+        <h1
+          style="
+            padding: 10px;
+            align-items: end;
+            justify-content: center;
+            border: 1px solid #999;
+          "
+        >
+          小狐狸
+        </h1>
+      </div>
+      <!--导航栏-->
+      <div class="flex1">
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+        <div class="daoHang">导航</div>
+      </div>
+    </div>
+    <!--主区域-->
+    <div class="flex1 flex colum yinYing">
+      <!--头部栏-->
+      <div style="height: 120px; z-index: 1" class="baiSe mgl8 yinYing"></div>
+      <!--内容区-->
+      <div style="overflow: auto" class="neiRong flex1 flex yinYing">
+        <!--左区-->
+        <div style="flex: 3" class="flex colum mg8 yinYing">
+          <!--数据区-->
+          <div class="flex shuJuQu">
+            <!--数据块-->
+            <div
+              style="height: 120px"
+              class="shuJU flex1 baiSe mgr8 yinYing"
+            ></div>
+            <div
+              style="height: 120px"
+              class="shuJU flex1 baiSe mgr8 yinYing"
+            ></div>
+            <div
+              style="height: 120px"
+              class="shuJU flex1 baiSe mgr8 yinYing"
+            ></div>
+            <div style="height: 120px" class="shuJU flex1 baiSe yinYing"></div>
+          </div>
+          <!--列表区-->
+          <div class="flex colum">
+            <!--列表项-->
+            <div style="height: 230px" class="baiSe mgt8 yinYing"></div>
+            <div style="height: 230px" class="baiSe mgt8 yinYing"></div>
+            <div style="height: 230px" class="baiSe mgt8 yinYing"></div>
+            <div style="height: 230px" class="baiSe mgt8 yinYing"></div>
+            <div style="height: 230px" class="baiSe mgt8 yinYing"></div>
+            <div style="height: 230px" class="baiSe mgt8 yinYing"></div>
+          </div>
+        </div>
+        <!--右区-->
+        <div style="flex: 1" class="flex colum mgr8 mgt8 yinYing youQu">
+          <!--提示区-->
+          <div style="flex: 1" class="baiSe yinYing"></div>
+          <!--消息区-->
+          <div style="flex: 2" class="baiSe mgt8 yinYing"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
